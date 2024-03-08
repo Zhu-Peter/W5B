@@ -3,86 +3,54 @@
 @import "header";
 @import "footer";
 
-body{
-    font-family: 'PT Sans',sans-serif;
-}
+.page{
+    &_introduction{
+        background-color: $page-lighter-gray;
+        background-image: url(../images/gray_bg.jpg);
+        display: grid;
 
-.page_introduction {
-    background-color: $page-lighter-gray;
-    background-image: url(../images/gray_bg.jpg);
-    display: grid;
-}
+        &_layout{
+            padding: 30px 40px;
+            padding-right: 50px;
+            padding-top: 30px;
+            width: calc(((100% - 340px) / 2) + 340px);
+            margin: 0 0 0 auto;
+            display: grid;
+        }
 
-.page_introduction_layout{
-    padding-right: 50px;
-    padding-top: 30px;
-    width: calc(((100% - 340px) / 2) + 340px);
-    margin: 0 0 0 auto;
-    display: grid;
-}
+        &_title{
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 23px 0 0;
+        }
 
-.page_introduction_title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 23px 0 0;
-}
+        &_image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: 50%;
+            min-height: 364px;
+        }
 
-.page_introduction_image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: 50%;
-    min-height: 364px;
-}
+        &_text{
+            font-size: 1.24rem;
+            line-height: 1.6;
+            word-wrap: break-word;
+            position: relative;
+            margin: 20px 0 0;
+        }
 
-.page_introduction_text {
-    font-size: 1.24rem;
-    line-height: 1.6;
-    word-wrap: break-word;
-    position: relative;
-    margin: 20px 0 0;
-}
-
-.page_introduction_button {
-    color: white;
-    background-color: black;
-    letter-spacing: 3px;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    font-weight: 400;
-
-    margin: 45px auto 0 0;
-    padding: 10px 30px;
-}
-
-.page_profile_layout {
-    width: 540px;
-    margin: 0 auto;
-}
-
-.page_profile_title {
-    font-size: 4rem;
-    margin: 60px auto 0;
-    font-weight: 400;
-}
-
-.page_profile_description {
-    font-size: 1.25rem;
-}
-
-.page_profile_about_me {
-    h1{
+        &_button{
+            color: white;
+            background-color: black;
+            letter-spacing: 3px;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            font-weight: 400;
         
+            margin: 45px auto 0 0;
+            padding: 10px 30px;
+        }
     }
+
 }
-
-.page_profile_socials {
-
-    .svg-content{
-        fill: black;
-        width: 30px;
-        height: 30px;
-        margin: 0 10px;
-    }
-}
-
