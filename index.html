@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
+
 <head>
     <meta charset=UTF-8>
     <meta http-equiv=X-UA-Compatible content=IE=edge>
@@ -8,16 +9,46 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header class="page_header">
-        <img src="images/default-logo.png" alt="logo">
-
-        <img class="button" id="menu_icon" src="images/menu.svg">
-
+        <div class="page_header_layout">
+            <div class="page_header_logo">
+                <img id="page_header_logo" src="images/default-logo.png" alt="logo">
+            </div>
+            <nav class="page_header_menu">
+                <svg class="page_header_menu_icon" version="1.1" id="menu_icon" viewBox="0 0 16 16" x="0px" y="0px"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <rect y="1" width="16" height="2"></rect>
+                        <rect y="7" width="16" height="2"></rect>
+                        <rect y="13" width="16" height="2"></rect>
+                    </g>
+                </svg>
+            </nav>
+        </div>
     </header>
     <main>
-        <img src="" alt="">
+        <section class="page_introduction">
+            <div class="page_introduction_layout">
+                <div class="shape_circle_1"></div>
+                <h1 class="page_introduction_title">I'm Nick Norton!</h1>
+                <p class="page_introduction_text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                <a class="button" href="">read more</a>
+
+            </div>
+            <img class="page_introduction_image" src="images/man.jpg" alt="">
+        </section>
+        <section class="page_profile"></section>
+        <section class="page_about"></section>
+        <section class="page_what"></section>
+        <section class="page_works"></section>
+        <section class="page_quotes"></section>
     </main>
-    <footer></footer>
+    <footer>
+        <section class="page_footer_contact"></section>
+    </footer>
 </body>
+
 </html>

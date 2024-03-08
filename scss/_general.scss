@@ -1,8 +1,16 @@
 @import "colors";
 
 .button{
+    text-decoration: none;
     &:hover{
         cursor: pointer;
     }
 }
 
+.shape_circle_1{
+    width: 75px;
+    height: 75px;
+    background-color: $page-orange;
+    border-radius: 50%;
+    margin: 0 auto 0 0;
+}

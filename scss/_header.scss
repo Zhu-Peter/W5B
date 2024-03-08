@@ -3,9 +3,28 @@
 .page_header{
     position: relative;
     display: block;
+    justify-content: center;
+}
+
+.page_header_layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 80px;
+    width: 575px;
+    margin: 0 auto;
+}
+
+.page_header_logo{
+    margin: 22px auto 0 0;
+}
+
+nav{
+    width: auto;
+    margin: -32px 0 22px auto;
 }
 
 #menu_icon {
-    filter: invert(62%) sepia(40%) saturate(7482%) hue-rotate(334deg) brightness(92%) contrast(100%);
+    fill: $page-orange;
     height: 2em;
+    min-width: auto;
 }
