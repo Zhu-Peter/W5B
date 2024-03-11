@@ -5,6 +5,12 @@ $breakpoints: (
     'large': 998px
 );
 
+$sheet-width: (
+    'small': 340px,
+    'medium': 720px,
+    'large': 940px
+);
+
 @mixin breakpoint($size) {
     @media only screen and (min-width: map-get($breakpoints, $size)) {
         @content;

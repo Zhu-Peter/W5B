@@ -1,21 +1,36 @@
 @import "colors";
+@import "breakpoints";
 
 .page_header{
     position: relative;
     display: block;
-    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
 .page_header_layout{
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 80px;
-    width: 575px;
+    width: 340px;
     margin: 0 auto;
+
+    @include breakpoint(medium){
+        width: map-get($map: $sheet-width, $key: medium);
+    }
+
+    @include breakpoint(large){
+        width: map-get($map: $sheet-width, $key: large);
+    }
 }
 
 .page_header_logo{
     margin: 22px auto 0 0;
+    #page_header_logo{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 nav{
@@ -28,3 +43,4 @@ nav{
     height: 2em;
     min-width: auto;
 }
+
