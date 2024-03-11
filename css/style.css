@@ -63,4 +63,10 @@ p {
 
 a, a:visited, a:active {
   text-decoration: none;
+}
+
+.page_introduction {
+  background-color: #e0e5eb;
+  background-image: url(../images/gray_bg.jpg);
+  display: grid;
 }/*# sourceMappingURL=style.css.map */
