@@ -42,45 +42,25 @@ nav {
   min-width: auto;
 }
 
-.page_introduction {
-  background-color: #e0e5eb;
-  background-image: url(../images/gray_bg.jpg);
-  display: grid;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  color: #292e33;
 }
-.page_introduction_layout {
-  padding: 30px 40px;
-  padding-right: 50px;
-  padding-top: 30px;
-  width: calc((100% - 340px) / 2 + 340px);
-  margin: 0 0 0 auto;
-  display: grid;
-}
-.page_introduction_title {
-  font-size: 3rem;
+
+h1,
+h2,
+h3 {
   font-weight: 700;
-  margin: 23px 0 0;
+  line-height: 1.1;
+  margin-top: 0;
 }
-.page_introduction_image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: 50%;
-  min-height: 364px;
+
+p {
+  margin-top: 0;
 }
-.page_introduction_text {
-  font-size: 1.24rem;
-  line-height: 1.6;
-  word-wrap: break-word;
-  position: relative;
-  margin: 20px 0 0;
-}
-.page_introduction_button {
-  color: white;
-  background-color: black;
-  letter-spacing: 3px;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin: 45px auto 0 0;
-  padding: 10px 30px;
+
+a, a:visited, a:active {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
