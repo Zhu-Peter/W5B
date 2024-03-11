@@ -30,6 +30,8 @@ h2 {
 h6 {
   font-size: 1.125rem;
   line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 p {
@@ -44,6 +46,7 @@ section > div {
 
 a, a:visited, a:active {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -180,4 +183,15 @@ nav {
   .page_about_image {
     width: 540px;
   }
+}
+.page_about_contacts {
+  color: white;
+  background-color: #ec563d;
+  display: grid;
+  gap: 20px;
+  padding: 30px 20px;
+  font-size: 1.25rem;
+}
+.page_about_contacts > p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
