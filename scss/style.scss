@@ -16,6 +16,7 @@ h1,
 h2,
 h3 {
     font-weight: 700;
+    font-size: 3rem;
     line-height: 1.1;
     margin-top: 0;
 }
@@ -24,11 +25,13 @@ p {
     margin-top: 0;
 }
 
-a, a:visited, a:active{
+a, a:visited, a:active {
     text-decoration: none;
 }
 
-.page_introduction{
+// stuff
+
+.page_introduction {
     background-color: $page-lighter-gray;
     background-image: url(../images/gray_bg.jpg);
     display: grid;
@@ -37,5 +40,9 @@ a, a:visited, a:active{
     // @include breakpoint(medium){
     //     //content
     // }
+
+    &_layout {
+        display: grid;
+    }
 
 }
