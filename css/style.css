@@ -237,6 +237,7 @@ nav {
 }
 .page_what_grid {
   display: grid;
+  gap: 40px;
   margin: 60px 0;
 }
 .page_what_description {
