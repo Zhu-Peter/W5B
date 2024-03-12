@@ -163,15 +163,15 @@
     &_rectangle {
         background-color: $page-orange;
         width: 260px;
-        height: 2725px;
+        height: 2525px;
         margin-top: 60px;
         margin-inline: auto;
     }
 
     &_gallery {
         width: 340px;
-        height: 2129px;
-        margin-top: -2667px;
+        height: 1929px;
+        margin-top: -2467px;
         margin-inline: auto;
 
         img {
@@ -179,4 +179,22 @@
             object-fit: cover;
         }
     }
+
+    &_container {
+        background-color: white;
+        padding: 30px 20px 50px;
+        margin-bottom: 140px;
+    }
+
+    &_content {
+        margin-bottom: 40px;
+    }
+
+    &_button {
+        @extend %black-button
+    }
+}
+
+.page_quotes{
+    background-color: $page-lighter-gray;
 }

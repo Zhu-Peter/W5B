@@ -77,7 +77,7 @@ svg {
   cursor: pointer;
 }
 
-.page_introduction_button {
+.page_works_button, .page_introduction_button {
   color: white;
   background-color: black;
   letter-spacing: 3px;
@@ -268,17 +268,28 @@ nav {
 .page_works_rectangle {
   background-color: #ec563d;
   width: 260px;
-  height: 2725px;
+  height: 2525px;
   margin-top: 60px;
   margin-inline: auto;
 }
 .page_works_gallery {
   width: 340px;
-  height: 2129px;
-  margin-top: -2667px;
+  height: 1929px;
+  margin-top: -2467px;
   margin-inline: auto;
 }
 .page_works_gallery img {
   width: 100%;
   object-fit: cover;
+}
+.page_works_container {
+  background-color: white;
+  padding: 30px 20px 50px;
+  margin-bottom: 140px;
+}
+.page_works_content {
+  margin-bottom: 40px;
+}
+.page_quotes {
+  background-color: #e0e5eb;
 }/*# sourceMappingURL=style.css.map */
