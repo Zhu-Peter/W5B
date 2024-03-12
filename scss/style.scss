@@ -8,7 +8,6 @@
     background-color: $page-lighter-gray;
     background-image: url(../images/gray_bg.jpg);
     display: grid;
-    padding: 30px 40px 0;
 
     // tablet breakpoint
     // @include breakpoint(medium){
@@ -17,6 +16,8 @@
 
     &_layout {
         display: grid;
+        padding: 30px 40px 0;
+        margin: 0;
     }
 
     &_button {
@@ -32,6 +33,7 @@
         overflow: visible;
         margin: 0;
         padding: 30px;
+        margin-top: 30px;
     }
 }
 
@@ -77,16 +79,104 @@
         }
     }
 
+    &_article {
+        line-height: 2;
+    }
+
+    &_grid {
+        display: grid;
+        gap: 30px;
+        padding: 0 20px;
+        margin-top: -60px;
+    }
+
     &_contacts {
+        grid-row: 1;
+
         color: white;
         background-color: $page-orange;
         display: grid;
         gap: 20px;
         padding: 30px 20px;
         font-size: 1.25rem;
-
+        >a{
+            color: white;
+        }
         >p{
             margin: 0;
+        }
+    }
+}
+
+.page_what {
+    background-color: $page-lighter-gray;
+    text-align: center;
+
+    &_layout {
+        padding: 1px;
+    }
+
+    &_title {
+        margin: 60px auto 0;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+    }
+
+    &_grid {
+        display: grid;
+        margin: 60px 0;
+    }
+
+    &_description {
+        margin: 20px 0;
+        font-style: italic;
+    }
+
+    &_circle {
+        display: block;
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        padding: 13px;
+        color: white;
+        background-color: $page-orange;
+        margin: 0 auto 0 0;
+    }
+
+    &_icon {
+        fill: white;
+    }
+
+    &_item {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2rem;
+    }
+
+    &_list{
+        text-align: left;
+    }
+}
+
+.page_works{
+
+    &_rectangle {
+        background-color: $page-orange;
+        width: 260px;
+        height: 2725px;
+        margin-top: 60px;
+        margin-inline: auto;
+    }
+
+    &_gallery {
+        width: 340px;
+        height: 2129px;
+        margin-top: -2667px;
+        margin-inline: auto;
+
+        img {
+            width: 100%;
+            object-fit: cover;
         }
     }
 }

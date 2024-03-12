@@ -14,7 +14,6 @@ h1 {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  font-size: clamp(3rem, 1.9436619718rem + 4.5070422535vw, 6rem);
   line-height: 1;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -25,6 +24,20 @@ h2 {
   font-weight: 700;
   line-height: 1.1;
   margin: 60px auto 1em;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  letter-spacing: 5px;
+  color: #555c66;
+  margin: 0;
 }
 
 h6 {
@@ -46,7 +59,6 @@ section > div {
 
 a, a:visited, a:active {
   text-decoration: none;
-  color: inherit;
 }
 
 img {
@@ -133,10 +145,11 @@ nav {
   background-color: #e0e5eb;
   background-image: url(../images/gray_bg.jpg);
   display: grid;
-  padding: 30px 40px 0;
 }
 .page_introduction_layout {
   display: grid;
+  padding: 30px 40px 0;
+  margin: 0;
 }
 .page_introduction_image {
   background-image: url(../images/man.jpg);
@@ -147,6 +160,7 @@ nav {
   overflow: visible;
   margin: 0;
   padding: 30px;
+  margin-top: 30px;
 }
 
 .page_profile_layout {
@@ -184,7 +198,17 @@ nav {
     width: 540px;
   }
 }
+.page_about_article {
+  line-height: 2;
+}
+.page_about_grid {
+  display: grid;
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: -60px;
+}
 .page_about_contacts {
+  grid-row: 1;
   color: white;
   background-color: #ec563d;
   display: grid;
@@ -192,6 +216,69 @@ nav {
   padding: 30px 20px;
   font-size: 1.25rem;
 }
+.page_about_contacts > a {
+  color: white;
+}
 .page_about_contacts > p {
   margin: 0;
+}
+
+.page_what {
+  background-color: #e0e5eb;
+  text-align: center;
+}
+.page_what_layout {
+  padding: 1px;
+}
+.page_what_title {
+  margin: 60px auto 0;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.page_what_grid {
+  display: grid;
+  margin: 60px 0;
+}
+.page_what_description {
+  margin: 20px 0;
+  font-style: italic;
+}
+.page_what_circle {
+  display: block;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  padding: 13px;
+  color: white;
+  background-color: #ec563d;
+  margin: 0 auto 0 0;
+}
+.page_what_icon {
+  fill: white;
+}
+.page_what_item {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+}
+.page_what_list {
+  text-align: left;
+}
+
+.page_works_rectangle {
+  background-color: #ec563d;
+  width: 260px;
+  height: 2725px;
+  margin-top: 60px;
+  margin-inline: auto;
+}
+.page_works_gallery {
+  width: 340px;
+  height: 2129px;
+  margin-top: -2667px;
+  margin-inline: auto;
+}
+.page_works_gallery img {
+  width: 100%;
+  object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
