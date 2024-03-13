@@ -77,15 +77,20 @@ svg {
   cursor: pointer;
 }
 
-.page_works_button, .page_introduction_button {
+.black-button, .page_works_button, .page_introduction_button {
   color: white;
   background-color: black;
   letter-spacing: 3px;
   font-size: 1.25rem;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 45px auto 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0px auto 0 0;
   padding: 10px 30px;
+}
+.black-button:hover, .page_works_button:hover, .page_introduction_button:hover {
+  background-color: #ec563d;
 }
 
 .shape_circle_1 {
@@ -146,25 +151,50 @@ nav {
   background-image: url(../images/gray_bg.jpg);
   display: grid;
 }
+@media only screen and (min-width: 768px) {
+  .page_introduction {
+    grid-template-columns: 1.1fr 1.9fr;
+  }
+}
 .page_introduction_layout {
   display: grid;
-  padding: 30px 40px 0;
+  padding: 30px 40px;
   margin: 0;
 }
+.page_introduction_button {
+  margin-bottom: auto;
+}
 .page_introduction_image {
-  background-image: url(../images/man.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
   min-width: 100%;
-  min-height: 364px;
-  overflow: visible;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+}
+.page_introduction_image_container {
   margin: 0;
-  padding: 30px;
-  margin-top: 30px;
+  height: 100%;
 }
 
 .page_profile_layout {
   margin-bottom: 60px;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+.page_profile_title {
+  margin-top: 60px;
+  font-size: 4rem;
+}
+@media only screen and (min-width: 768px) {
+  .page_profile_title {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .page_profile_description {
+    text-align: center;
+  }
 }
 .page_profile_picture {
   width: 294px;
@@ -190,25 +220,102 @@ nav {
   margin-right: 10px;
 }
 
-.page_about_image {
-  width: 340px;
+@media only screen and (min-width: 768px) {
+  .page_profile_layout {
+    max-width: 1100px;
+    margin-inline: auto;
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+  }
+  .page_profile_title {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .page_profile_description {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .page_profile_about_me {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .page_profile_about_me > p {
+    line-height: 2;
+  }
+  .page_profile_picture {
+    grid-row: 3;
+    grid-column: 2;
+    width: 200px;
+    height: 200px;
+    margin-top: 60px;
+  }
+  .page_profile_details {
+    grid-row: 3;
+    grid-column: 3;
+  }
+}
+.page_about_layout {
+  max-width: 1120px;
 }
 @media only screen and (min-width: 768px) {
+  .page_about_layout {
+    width: calc((100% - 720px) / 2 + 720px);
+    margin-inline: auto;
+  }
+}
+.page_about_image {
+  width: 340px;
+  margin-inline: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 568px) {
   .page_about_image {
     width: 540px;
   }
 }
-.page_about_article {
+@media only screen and (min-width: 768px) {
+  .page_about_image {
+    width: 720px;
+  }
+}
+@media only screen and (min-width: 998px) {
+  .page_about_image {
+    width: 920px;
+  }
+}
+.page_about_article, .page_about_subtitle {
   line-height: 2;
+  max-width: 340px;
+}
+@media only screen and (min-width: 568px) {
+  .page_about_article, .page_about_subtitle {
+    max-width: 540px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .page_about_article, .page_about_subtitle {
+    max-width: 720px;
+  }
+}
+@media only screen and (min-width: 998px) {
+  .page_about_article, .page_about_subtitle {
+    max-width: 920px;
+  }
 }
 .page_about_grid {
   display: grid;
   gap: 30px;
+  max-width: 900px;
   padding: 0 20px;
   margin-top: -60px;
 }
 .page_about_contacts {
   grid-row: 1;
+  max-width: fit-content;
   color: white;
   background-color: #ec563d;
   display: grid;
@@ -222,6 +329,18 @@ nav {
 .page_about_contacts > p {
   margin: 0;
 }
+@media only screen and (min-width: 768px) {
+  .page_about_grid {
+    grid-template-columns: auto auto;
+    margin: 20px 0;
+  }
+  .page_about_contacts {
+    grid-column: 2;
+    margin-top: -120px;
+    padding: auto 20px;
+    align-items: center;
+  }
+}
 
 .page_what {
   background-color: #e0e5eb;
@@ -229,6 +348,8 @@ nav {
 }
 .page_what_layout {
   padding: 1px;
+  max-width: 1100px;
+  margin-inline: auto;
 }
 .page_what_title {
   margin: 60px auto 0;
@@ -238,7 +359,8 @@ nav {
 .page_what_grid {
   display: grid;
   gap: 40px;
-  margin: 60px 0;
+  max-width: 1140px;
+  margin: 60px auto;
 }
 .page_what_description {
   margin: 20px 0;
@@ -265,19 +387,36 @@ nav {
 .page_what_list {
   text-align: left;
 }
+@media only screen and (min-width: 768px) {
+  .page_what_title {
+    font-size: 4rem;
+  }
+  .page_what_grid {
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (min-width: 998px) {
+  .page_what_grid {
+    grid-template-columns: auto auto auto;
+  }
+}
 
+.page_works_layout {
+  max-width: 1100px;
+  margin-inline: auto;
+}
 .page_works_rectangle {
   background-color: #ec563d;
   width: 260px;
   height: 2525px;
-  margin-top: 60px;
-  margin-inline: auto;
+  margin: 60px auto 0;
 }
 .page_works_gallery {
   width: 340px;
   height: 1929px;
   margin-top: -2467px;
   margin-inline: auto;
+  display: grid;
 }
 .page_works_gallery img {
   width: 100%;
@@ -291,6 +430,56 @@ nav {
 .page_works_content {
   margin-bottom: 40px;
 }
+@media only screen and (min-width: 768px) {
+  .page_works_rectangle {
+    height: 1300px;
+    margin-left: 200px;
+  }
+  .page_works_gallery {
+    grid-template-columns: auto auto;
+    gap: 30px;
+    width: 685px;
+    height: 1055px;
+    margin-top: -1210px;
+  }
+  .page_works_gallery img {
+    width: 100%;
+    height: 295px;
+    object-fit: cover;
+  }
+  .page_works_container {
+    display: block;
+    width: 435px;
+    margin-top: -85px;
+    margin-left: auto;
+    position: relative;
+  }
+}
+@media only screen and (min-width: 998px) {
+  .page_works_rectangle {
+    height: 1062px;
+    margin-left: 370px;
+  }
+  .page_works_gallery {
+    grid-template-columns: auto auto auto;
+    margin-top: -970px;
+    height: 631px;
+  }
+}
+
 .page_quotes {
   background-color: #e0e5eb;
+  text-align: center;
+}
+.page_quotes img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-color: #ec563d;
+  border-width: 6px;
+  border-style: solid;
+}
+.page_quotes svg {
+  height: 30px;
+  width: 30px;
 }/*# sourceMappingURL=style.css.map */

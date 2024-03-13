@@ -5,197 +5,380 @@
 @import "footer";
 
 .page_introduction {
-    background-color: $page-lighter-gray;
-    background-image: url(../images/gray_bg.jpg);
+  background-color: $page-lighter-gray;
+  background-image: url(../images/gray_bg.jpg);
+  display: grid;
+
+  // tablet breakpoint
+  @include breakpoint(medium) {
+    grid-template-columns: 1.1fr 1.9fr;
+  }
+
+  &_layout {
     display: grid;
+    padding: 30px 40px;
+    margin: 0;
+  }
 
-    // tablet breakpoint
-    // @include breakpoint(medium){
-    //     //content
-    // }
+  &_button {
+    @extend .black-button;
+    margin-bottom: auto;
+  }
 
-    &_layout {
-        display: grid;
-        padding: 30px 40px 0;
-        margin: 0;
+  // &_image {
+  //     background-image: url(../images/man.jpg);
+  //     background-position: 50% 50%;
+  //     background-size: cover;
+  //     min-width: 100%;
+  //     min-height: 364px;
+  //     overflow: visible;
+  //     margin: 0;
+  //     padding: 30px;
+  //     margin-top: 30px;
+  // }
+
+  &_image {
+    min-width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    &_container {
+      margin: 0;
+      height: 100%;
     }
-
-    &_button {
-        @extend %black-button;
-    }
-
-    &_image {
-        background-image: url(../images/man.jpg);
-        background-position: 50% 50%;
-        background-size: cover;
-        min-width: 100%;
-        min-height: 364px;
-        overflow: visible;
-        margin: 0;
-        padding: 30px;
-        margin-top: 30px;
-    }
+  }
 }
 
 .page_profile {
+  &_layout {
+    margin-bottom: 60px;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 20px;
+  }
 
+  &_title {
+    margin-top: 60px;
+    font-size: 4rem;
+    @include breakpoint(medium) {
+      text-align: center;
+    }
+  }
+
+  &_description {
+    @include breakpoint(medium) {
+      text-align: center;
+    }
+  }
+
+  &_picture {
+    width: 294px;
+    height: 294px;
+
+    @include breakpoint(medium) {
+      width: 374px;
+      height: 374px;
+    }
+
+    border-radius: 50%;
+  }
+
+  &_details > p {
+    line-height: 2.2;
+  }
+
+  &_socials {
+    display: flex;
+    height: 24px;
+    width: 91px;
+    margin: 30px auto 0 0;
+    > a {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include breakpoint(medium) {
+  .page_profile {
     &_layout {
-        margin-bottom: 60px;
+        max-width: 1100px;
+        margin-inline: auto;
+      margin-inline: auto;
+      display: grid;
+      grid-template-rows: auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: start;
+      justify-items: center;
     }
-
+    &_title {
+      grid-row: 1;
+      grid-column: 2;
+    }
+    &_description {
+      grid-row: 2;
+      grid-column: 2;
+    }
+    &_about_me {
+      grid-row: 3;
+      grid-column: 1;
+      > p {
+        line-height: 2;
+      }
+    }
     &_picture {
-        width: 294px;
-        height: 294px;
-
-        @include breakpoint(medium){
-            width: 374px;
-            height: 374px;
-        }
-
-        border-radius: 50%;
+      grid-row: 3;
+      grid-column: 2;
+      width: 200px;
+      height: 200px;
+      margin-top: 60px;
     }
-
-    &_details > p {
-        line-height: 2.2;
+    &_details {
+      grid-row: 3;
+      grid-column: 3;
     }
-
-    &_socials {
-        display: flex;
-        height: 24px;
-        width: 91px;
-        margin: 30px auto 0 0 ;
-        >a{
-            margin-right: 10px;
-        }
-    }
+  }
 }
 
 .page_about {
-    &_image {
-        width: 340px;
-
-        @include breakpoint(medium){
-            width: 540px;
-        }
+  &_layout {
+    max-width: 1120px;
+    @include breakpoint(medium) {
+      width: calc(((100% - 720px) / 2) + 720px);
+      margin-inline: auto;
     }
+  }
 
-    &_article {
-        line-height: 2;
+  &_image {
+    width: 340px;
+    margin-inline: auto;
+    text-align: center;
+    @include breakpoint(small) {
+        width: 540px;
     }
-
-    &_grid {
-        display: grid;
-        gap: 30px;
-        padding: 0 20px;
-        margin-top: -60px;
+    @include breakpoint(medium) {
+      width: 720px;
     }
+    @include breakpoint(large) {
+        width: 920px;
+      }
+  }
 
+  &_article, &_subtitle {
+    line-height: 2;
+    max-width: 340px;
+    @include breakpoint(small) {
+        max-width: 540px;
+    }
+    @include breakpoint(medium) {
+      max-width: 720px;
+    }
+    @include breakpoint(large) {
+        max-width: 920px;
+      }
+  }
+
+  &_grid {
+    display: grid;
+    gap: 30px;
+    max-width: 900px;
+    padding: 0 20px;
+    margin-top: -60px;
+  }
+
+  &_contacts {
+    grid-row: 1;
+    max-width: fit-content;
+    color: white;
+    background-color: $page-orange;
+    display: grid;
+    gap: 20px;
+    padding: 30px 20px;
+    font-size: 1.25rem;
+    > a {
+      color: white;
+    }
+    > p {
+      margin: 0;
+    }
+  }
+  @include breakpoint(medium) {
+    &_grid{
+        grid-template-columns: auto auto;
+        margin: 20px 0;
+    }
     &_contacts {
-        grid-row: 1;
-
-        color: white;
-        background-color: $page-orange;
-        display: grid;
-        gap: 20px;
-        padding: 30px 20px;
-        font-size: 1.25rem;
-        >a{
-            color: white;
-        }
-        >p{
-            margin: 0;
-        }
+        grid-column: 2;
+        margin-top: -120px;
+        padding: auto 20px;
+        align-items: center;
     }
+  }
 }
 
 .page_what {
-    background-color: $page-lighter-gray;
-    text-align: center;
+  background-color: $page-lighter-gray;
+  text-align: center;
 
-    &_layout {
-        padding: 1px;
+  &_layout {
+    padding: 1px;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
+  &_title {
+    margin: 60px auto 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
+
+  &_grid {
+    display: grid;
+    gap: 40px;
+    max-width: 1140px;
+    margin: 60px auto;
+  }
+
+  &_description {
+    margin: 20px 0;
+    font-style: italic;
+  }
+
+  &_circle {
+    display: block;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    padding: 13px;
+    color: white;
+    background-color: $page-orange;
+    margin: 0 auto 0 0;
+  }
+
+  &_icon {
+    fill: white;
+  }
+
+  &_item {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+  }
+
+  &_list {
+    text-align: left;
+  }
+
+  @include breakpoint(medium) {
+    &_title{
+        font-size: 4rem;
     }
-
-    &_title {
-        margin: 60px auto 0;
-        text-transform: uppercase;
-        font-size: 2.5rem;
-    }
-
-    &_grid {
-        display: grid;
-        gap: 40px;
-        margin: 60px 0;
-    }
-
-    &_description {
-        margin: 20px 0;
-        font-style: italic;
-    }
-
-    &_circle {
-        display: block;
-        height: 65px;
-        width: 65px;
-        border-radius: 50%;
-        padding: 13px;
-        color: white;
-        background-color: $page-orange;
-        margin: 0 auto 0 0;
-    }
-
-    &_icon {
-        fill: white;
-    }
-
-    &_item {
-        display: grid;
+    &_grid{
         grid-template-columns: auto auto;
-        gap: 2rem;
     }
+  }
 
-    &_list{
-        text-align: left;
+  @include breakpoint(large) {
+    &_grid{
+        grid-template-columns: auto auto auto;
     }
+  }
 }
 
-.page_works{
-
-    &_rectangle {
-        background-color: $page-orange;
-        width: 260px;
-        height: 2525px;
-        margin-top: 60px;
+.page_works {
+    &_layout {
+        max-width: 1100px;
         margin-inline: auto;
     }
+  &_rectangle {
+    background-color: $page-orange;
+    width: 260px;
+    height: 2525px;
+    margin: 60px auto 0;
+  }
 
+  &_gallery {
+    width: 340px;
+    height: 1929px;
+    margin-top: -2467px;
+    margin-inline: auto;
+    display: grid;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_container {
+    background-color: white;
+    padding: 30px 20px 50px;
+    margin-bottom: 140px;
+  }
+
+  &_content {
+    margin-bottom: 40px;
+  }
+
+  &_button {
+    @extend .black-button;
+  }
+
+  @include breakpoint(medium) {
+    &_rectangle{
+        height: 1300px;
+        margin-left: 200px;
+    }
     &_gallery {
-        width: 340px;
-        height: 1929px;
-        margin-top: -2467px;
-        margin-inline: auto;
+        grid-template-columns: auto auto;
+        gap: 30px;
+        width: 685px;
+        height: 1055px;
+        margin-top: -1210px;
 
         img {
             width: 100%;
+            height: 295px;
             object-fit: cover;
-        }
+          }
     }
-
     &_container {
-        background-color: white;
-        padding: 30px 20px 50px;
-        margin-bottom: 140px;
+        display: block;
+        width: 435px;
+        margin-top: -85px;
+        margin-left: auto;
+        position: relative;
     }
+  }
 
-    &_content {
-        margin-bottom: 40px;
+  @include breakpoint(large) {
+    &_rectangle{
+        height: 1062px;
+        margin-left: 370px;
     }
-
-    &_button {
-        @extend %black-button
+    &_gallery{
+        grid-template-columns: auto auto auto;
+        margin-top: -970px;
+        height: 631px;
     }
+  }
 }
 
-.page_quotes{
-    background-color: $page-lighter-gray;
+.page_quotes {
+  background-color: $page-lighter-gray;
+  text-align: center;
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-color: $page-orange;
+    border-width: 6px;
+    border-style: solid;
+  }
+
+  svg {
+    height: 30px;
+    width: 30px;
+  }
 }
+
