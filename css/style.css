@@ -513,6 +513,7 @@ nav {
   width: 30px;
 }
 .carousel_button_before, .carousel_button_after, .carousel_button_before, .carousel_button_after {
+  pointer-events: none;
   position: absolute;
   top: 50%;
   bottom: 0;
@@ -549,7 +550,7 @@ nav {
   bottom: 0;
   left: 0;
   display: flex;
-  overflow: hidden;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
@@ -614,7 +615,7 @@ nav {
   .carousel_content {
     animation-name: tonext, snap;
     animation-timing-function: ease;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
   }
   .carousel_slide:last-child .carousel_content {
@@ -638,17 +639,21 @@ nav {
   transition: transform 0.1s;
 }
 
-.carousel_prev,
-.carousel_next {
+.carousel_prev, .carousel_next {
   position: absolute;
   top: 0;
-  margin-top: 37.5%;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
+  width: 8rem;
+  height: 8rem;
+  transform: translateY(-53%);
+  top: 50%;
+  bottom: 0;
+  left: 18vw;
   border-radius: 50%;
   font-size: 0;
   outline: 0;
+}
+.carousel_next {
+  left: 77vw;
 }
 
 .page_footer_contact {
