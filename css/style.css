@@ -57,11 +57,6 @@ a, a:visited, a:active {
   text-decoration: none;
 }
 
-svg {
-  width: 100%;
-  height: 100%;
-}
-
 .button {
   text-decoration: none;
 }
@@ -69,7 +64,7 @@ svg {
   cursor: pointer;
 }
 
-.black-button, .page_works_button, .page_introduction_button {
+.black-button, .page_footer_contact .form_button, .page_works_button, .page_introduction_button {
   color: white;
   background-color: black;
   letter-spacing: 3px;
@@ -81,7 +76,7 @@ svg {
   margin: 0px auto 0 0;
   padding: 10px 30px;
 }
-.black-button:hover, .page_works_button:hover, .page_introduction_button:hover {
+.black-button:hover, .page_footer_contact .form_button:hover, .page_works_button:hover, .page_introduction_button:hover {
   background-color: #ec563d;
 }
 
@@ -146,7 +141,6 @@ nav {
 .page_introduction_container {
   display: grid;
   margin-left: auto;
-  width: calc((100% - 1140px) / 2 + 1140px);
 }
 @media only screen and (min-width: 768px) {
   .page_introduction_container {
@@ -164,8 +158,7 @@ nav {
 }
 .page_introduction_image {
   object-fit: cover;
-  width: 80%;
-  margin-left: auto;
+  width: 100%;
 }
 .page_introduction_image_container {
   display: flex;
@@ -475,6 +468,7 @@ nav {
   background-color: #e0e5eb;
   text-align: center;
   margin-top: 60px;
+  padding-inline: 40px;
 }
 .page_quotes img {
   width: 200px;
@@ -496,7 +490,6 @@ nav {
 .page_quotes svg {
   height: 30px;
   width: 30px;
-  content: "";
   z-index: 1;
   background-color: #333;
   background-size: 1.5rem 1.5rem;
@@ -512,7 +505,21 @@ nav {
 .carousel {
   position: relative;
   min-height: 500px;
-  width: 340px;
+  margin-top: 63px;
+  background-color: #e0e5eb;
+}
+.carousel svg {
+  height: 30px;
+  width: 30px;
+}
+.carousel_button_before, .carousel_button_after, .carousel_button_before, .carousel_button_after {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 20vw;
+}
+.carousel_button_after, .carousel_button_after {
+  left: 80vw;
 }
 .carousel * {
   scrollbar-color: transparent transparent;
@@ -524,6 +531,17 @@ nav {
   margin: 0;
   padding: 0;
 }
+.carousel_nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.carousel_nav ol, .carousel_nav li {
+  display: inline-block;
+  list-style: none;
+}
 .carousel_viewport {
   position: absolute;
   top: 0;
@@ -531,7 +549,7 @@ nav {
   bottom: 0;
   left: 0;
   display: flex;
-  overflow-x: scroll;
+  overflow: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
@@ -539,7 +557,7 @@ nav {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #e0e5eb;
+  overflow: hidden;
 }
 .carousel_content {
   position: absolute;
@@ -643,4 +661,30 @@ nav {
 }
 .page_footer_contact_container {
   width: 340px;
+  padding-top: 50px;
+  margin-inline: auto;
+}
+@media only screen and (min-width: 768px) {
+  .page_footer_contact_container {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+@media only screen and (min-width: 998px) {
+  .page_footer_contact_container {
+    width: 1000px;
+  }
+}
+.page_footer_contact_box_forms {
+  border-color: #ffffff;
+  stroke: #ffffff;
+  margin-bottom: 50px;
+}
+.page_footer_contact .form_button {
+  border: #fff solid 4px;
+}
+.page_footer_contact .u-form-control-hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
